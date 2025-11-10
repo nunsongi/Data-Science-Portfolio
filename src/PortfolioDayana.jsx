@@ -157,7 +157,8 @@ export default function PortfolioDayana() {
                 <Tag tone={tone.chip}>Numpy</Tag>
                 <Tag tone={tone.chip}>Matplotlib</Tag>
                 <Tag tone={tone.chip}>ScikitLearn</Tag>
-                <Tag tone={tone.chip}>ScikitLearn</Tag>
+                <Tag tone={tone.chip}>PyTorch</Tag>
+                <Tag tone={tone.chip}>TensorFlow</Tag>
               </div>
             </div>
             <div className={`rounded-3xl border ${tone.card} p-6`}> 
