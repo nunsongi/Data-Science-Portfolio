@@ -117,7 +117,7 @@ export default function PortfolioNunsongi() {
         <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
-              Nunsongi<span className={`${tone.accent}`}>Junior Data Scientist</span>
+              Nunsongi<span className={`${tone.accent}`}> Junior Data Scientist</span>
             </a>
             <nav className="hidden md:flex items-center gap-6">
               {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
@@ -127,14 +127,23 @@ export default function PortfolioNunsongi() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <button onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} aria-label="Cambiar tema" className={`rounded-xl px-3 py-2 border ${tone.card} ${tone.ring}
-            bg-neutral-100 dark:bg-neutral-800
-                   text-neutral-900 dark:text-white 
-                   font-semibold text-base transition-all
-                   hover:bg-neutral-200 dark:hover:bg-neutral-700
-                   hover:border-neutral-400 dark:hover:border-neutral-500"`}>
+            <button
+              onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+              aria-label="Cambiar tema"
+              className={`
+                rounded-xl px-4 py-2 border ${tone.card} ${tone.ring}
+                ${tone.sub}                          /* color de texto = links del nav (p.ej. Habilidades) */
+                bg-transparent hover:bg-neutral-100/70   /* claro: botón 'ghost' con hover suave */
+               dark:bg-white/5 dark:text-neutral-100    /* oscuro: pill translúcido + texto claro */
+               dark:hover:bg-white/10                   /* oscuro: hover un poco más visible */
+                font-semibold text-base transition-colors
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+               focus-visible:ring-fuchsia-400/50 dark:focus-visible:ring-white/30
+            `}
+        >
               {mode === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
             </button>
+
           </div>
         </div>
       </header>
