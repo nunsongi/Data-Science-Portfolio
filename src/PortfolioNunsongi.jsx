@@ -162,16 +162,14 @@ export default function PortfolioNunsongi() {
               </div>
             </div>
             <div className={`rounded-3xl border ${tone.card} p-6`}> 
-              <div className="aspect-square rounded-2xl bg-transparent overflow-hidden grid place-items-center">
+              <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
-                  src="https://i.imgur.com/GdwJxVs.jpeg"
-                  alt="Avatar"
+                  src={`${import.meta.env.BASE_URL}avatar.jpg`}
+                  alt="Avatar de Dayana (Nunsongi)"
                   className="h-full w-full object-cover"
+                  loading="lazy"
                   />
-                  </div>
-              <p className={`mt-4 text-sm ${tone.sub}`}>
-                * Imagen/Avatar opcional arriba. Puedes reemplazarlo por tu foto.
-              </p>
+                </div>
             </div>
           </div>
         </div>
