@@ -109,8 +109,11 @@ export default function PortfolioNunsongi() {
       {/* NAV */}
       <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}> 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
-            Nunsongi<span className={`${tone.accent}`}>.dev</span>
+          <a href="#home" className={`font-extrabold tracking-tight text-xl flex items-center gap-2 ${tone.text}`}>
+            <span>Nunsongi</span>
+            <span className="text-xs rounded-full border px-2 py-0.5 opacity-80">
+              Data Science Jr.
+            </span>
           </a>
           <nav className="hidden md:flex items-center gap-6">
             {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
