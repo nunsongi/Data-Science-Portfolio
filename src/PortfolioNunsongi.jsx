@@ -113,49 +113,31 @@ export default function PortfolioNunsongi() {
 
   return ( 
    <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}>
-{/* NAV */} 
-<header className="sticky top-0 z-50 border-b bg-white dark:bg-neutral-900 border-neutral-300 dark:border-neutral-700 backdrop-blur-sm">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="#home" className="inline-flex items-center gap-2.5 whitespace-nowrap">
-      <span className="font-extrabold tracking-tight text-2xl text-neutral-900 dark:text-white">
-        Nunsongi
-      </span>
-      <span className="hidden sm:inline-block rounded-full px-3 py-1 text-sm font-semibold
-                       text-neutral-800 dark:text-neutral-100
-                       border-2 border-neutral-400 dark:border-neutral-500
-                       bg-neutral-200 dark:bg-neutral-800">
-        Junior Data Scientist
-      </span>
-    </a>
-    
-    <nav className="hidden md:flex items-center gap-6">
-      {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
-        <a 
-          key={item} 
-          href={`#${item.toLowerCase().replace(' ', '-')}`} 
-          className="text-neutral-700 dark:text-neutral-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-base"
-        >
-          {item}
-        </a>
-      ))}
-    </nav>
-    
-    <div className="flex items-center gap-2">
-      <button 
-        onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} 
-        aria-label="Cambiar tema" 
-        className="rounded-xl px-4 py-2 border-2 border-neutral-300 dark:border-neutral-600
-                   bg-neutral-100 dark:bg-neutral-800
+      {/* NAV */} 
+        <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
+              Nunsongi<span className={`${tone.accent}`}>Junior Data Scientist</span>
+            </a>
+            <nav className="hidden md:flex items-center gap-6">
+              {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
+                <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className={`${tone.sub} hover:${tone.accent} transition-colors`}>
+                  {item}
+               </a>
+            ))}
+          </nav>
+          <div className="flex items-center gap-2">
+            <button onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} aria-label="Cambiar tema" className={`rounded-xl px-3 py-2 border ${tone.card} ${tone.ring}
+            bg-neutral-100 dark:bg-neutral-800
                    text-neutral-900 dark:text-white 
                    font-semibold text-base transition-all
                    hover:bg-neutral-200 dark:hover:bg-neutral-700
-                   hover:border-neutral-400 dark:hover:border-neutral-500"
-      >
-        {mode === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
-      </button>
-    </div>
-  </div>
-</header>
+                   hover:border-neutral-400 dark:hover:border-neutral-500"`}>
+              {mode === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
+            </button>
+          </div>
+        </div>
+      </header>
 
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
