@@ -127,23 +127,22 @@ export default function PortfolioNunsongi() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-              aria-label="Cambiar tema"
-              className={`
-                rounded-xl px-4 py-2 border ${tone.card} ${tone.ring}
-                ${tone.sub}                          /* color de texto = links del nav (p.ej. Habilidades) */
-                bg-transparent hover:bg-neutral-900   /* claro: botón 'ghost' con hover suave */
-               dark:bg-white/5 dark:text-neutral-100    /* oscuro: pill translúcido + texto claro */
-               dark:hover:bg-white/10                   /* oscuro: hover un poco más visible */
-                font-semibold text-base transition-colors
+           <button
+            onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+            aria-label="Cambiar tema"
+            className={`
+              rounded-xl px-4 py-2 border ${tone.card} ${tone.ring}
+              bg-transparent hover:bg-violet-50            /* claro: ghost + hover lilita suave */
+             dark:bg-white/5 dark:hover:bg-white/10       /* oscuro: pill translúcido */
+             dark:text-neutral-100                        /* oscuro: texto claro */
+              font-semibold text-base transition-colors
               focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
-               focus-visible:ring-fuchsia-400/50 dark:focus-visible:ring-white/30
-            `}
-        >
-              {mode === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
-            </button>
-
+             focus-visible:ring-fuchsia-400/50 dark:focus-visible:ring-white/30
+            ${tone.sub}                                   /* <- color de texto = links del nav */
+          `}
+      >
+        {mode === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
+      </button>
           </div>
         </div>
       </header>
