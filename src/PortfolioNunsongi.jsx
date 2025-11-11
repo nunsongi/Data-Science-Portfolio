@@ -111,49 +111,31 @@ export default function PortfolioNunsongi() {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/\s+/g, "-");
 
-  return (
-    <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}> 
-      {/* NAV */}
-      <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="flex items-center justify-between py-3">
-            {/* Marca + badge */}
-            <div className="flex items-center gap-3 md:gap-4">
-              <a href="#home" className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Nunsongi
-              </a>
-              <span className="hidden sm:inline-flex items-center rounded-full border border-white/30 px-3 py-1 text-xs md:text-sm font-semibold text-white/90">
-                Junior Data Scientist
-              </span>
-            </div>
-
-            {/* Links */}
-            <nav className="hidden md:flex items-center gap-6">
-              {["Proyectos", "Habilidades", "Sobre mí", "Contacto"].map((item) => (
-                <a
-                  key={item}
-                  href={`#${slugify(item)}`}
-                  className={`${tone.sub} hover:${tone.accent} transition-colors`}
-                >
-                  {item}
-                </a>
-              ))}
-            </nav>
-
-            {/* Botón tema */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setMode(mode === "dark" ? "light" : "dark")}
-                aria-label="Cambiar tema"
-                className={`rounded-xl px-3 py-2 border ${tone.card} ${tone.ring}`}
-              >
-                {mode === "dark" ? "☀️ Claro" : "🌙 Oscuro"}
-              </button>
-            </div>
-          </div>
+  return ( 
+   <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}>
+     {/* NAV */} 
+     <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
+          Nunsongi
+          <span className="ml-2 hidden sm:inline text-xs opacity-80">
+            · Junior Data Scientist
+          </span>
+        </a>
+        <nav className="hidden md:flex items-center gap-6">
+          {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
+           <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className={`${tone.sub} hover:${tone.accent} transition-colors`}>
+            {item}
+           </a>
+         ))}
+        </nav>
+          <div className="flex items-center gap-2">
+            <button onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} aria-label="Cambiar tema" className={`rounded-xl px-3 py-2 border ${tone.card} ${tone.ring}`}>
+              {mode === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
+            </button>
         </div>
-      </header>
-
+      </div>
+    </header>
 
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
