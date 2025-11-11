@@ -66,7 +66,7 @@ const ProjectCard = ({ p, tone }) => (
   </article>
 );
 
-export default function PortfolioDayana() {
+export default function PortfolioNunsongi() {
   const [mode, setMode] = useState('dark');
   const tone = useMemo(() => (mode === 'dark' ? PALETTE.dark : PALETTE.light), [mode]);
 
@@ -138,7 +138,7 @@ export default function PortfolioDayana() {
             <div>
               <p className={`uppercase tracking-widest text-sm ${tone.sub}`}>Portafolio Personal</p>
               <h1 className={`mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold ${tone.text}`}>
-                Hi, I’m Dayana — also known as <span className={`${tone.accent}`}>Nunsongi</span>
+                Hi, I’m Dayana — a.k.a <span className={`${tone.accent}`}>Nunsongi</span>
                 <br className="hidden sm:block"/>
                 
               </h1>
@@ -281,7 +281,7 @@ export default function PortfolioDayana() {
 
       <footer className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className={`${tone.sub}`}>© {new Date().getFullYear()} Dayana — Portafolio.</p>
+          <p className={`${tone.sub}`}>© {new Date().getFullYear()} Nunsongi | Portafolio.</p>
           <div className="flex gap-3 text-sm">
             <a href="#stack" className={`${tone.sub} hover:${tone.accent}`}>Stack</a>
             <a href="#proyectos" className={`${tone.sub} hover:${tone.accent}`}>Proyectos</a>
