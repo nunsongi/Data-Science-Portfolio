@@ -116,15 +116,12 @@ export default function PortfolioNunsongi() {
      {/* NAV */} 
      <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a
-          href="#home"
-          className={`font-extrabold tracking-tight text-xl ${tone.text} text-neutral-900 dark:text-neutral-100`}
-        >
-          Nunsongi
-          <span className="hidden sm:inline text-sm font-semibold text-white/90 opacity-80">
-            · Junior Data Scientist
+       <a href="#home" className="inline-flex items-center gap-2 whitespace-nowrap">
+          <span className="font-extrabold tracking-tight text-xl">Nunsongi</span>
+          <span className="hidden sm:inline-block rounded-full border border-white/15 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-white/80 backdrop-blur">
+            Junior Data Scientist
           </span>
-        </a>
+      </a>
         <nav className="hidden md:flex items-center gap-6">
           {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
            <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className={`${tone.sub} hover:${tone.accent} transition-colors`}>
