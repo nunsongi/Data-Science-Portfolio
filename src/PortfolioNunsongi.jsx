@@ -115,18 +115,17 @@ export default function PortfolioNunsongi() {
    <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}>
      {/* NAV */} 
 {/* NAV */} 
-<header className={`${tone.nav} sticky top-0 z-50 border-b border-neutral-200 dark:border-white/10
-                    bg-gradient-to-r from-fuchsia-50 to-violet-50
-                    dark:bg-transparent backdrop-blur-sm`}>
+<header className={`${tone.nav} sticky top-0 z-50 border-b border-neutral-200 dark:border-white/10 backdrop-blur-sm`}>
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
     <a href="#home" className="inline-flex items-center gap-2.5 whitespace-nowrap">
       <span className="font-extrabold tracking-tight text-2xl text-neutral-900 dark:text-neutral-100">
         Nunsongi
       </span>
-      <span className="hidden sm:inline-block rounded-full px-3 py-1 text-sm font-semibold
-                 text-fuchsia-700 border border-fuchsia-300 bg-fuchsia-50
-                 dark:text-neutral-200 dark:border-white/30 dark:bg-white/5">
-         Junior Data Scientist
+      <span className="hidden sm:inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold
+                       text-neutral-700 dark:text-neutral-200
+                       border border-neutral-300 dark:border-white/20
+                       bg-neutral-100 dark:bg-white/5">
+        Junior Data Scientist
       </span>
     </a>
     <nav className="hidden md:flex items-center gap-6">
