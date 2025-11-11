@@ -117,12 +117,13 @@ export default function PortfolioNunsongi() {
      <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
        <a href="#home" className="inline-flex items-center gap-2 whitespace-nowrap">
-          <span className={`font-extrabold tracking-tight text-xl ${tone.text} text-neutral-900 dark:text-neutral-100`}
-          >Nunsongi</span>
+          <span className={`font-extrabold tracking-tight text-xl ${tone.text} text-neutral-900 dark:text-neutral-100`}>
+            Nunsongi
+          </span>
           <span className="hidden sm:inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold
-                           text-neutral-800 dark:text-white/85
-                           border border-neutral-900/20 dark:border-white/20
-                           bg-neutral-900/5 dark:bg-white/5">
+                           text-neutral-700 dark:text-neutral-200
+                            border border-neutral-300 dark:border-white/20
+                           bg-neutral-100 dark:bg-white/5">
             Junior Data Scientist
           </span>
       </a>
