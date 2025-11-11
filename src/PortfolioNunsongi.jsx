@@ -121,7 +121,7 @@ export default function PortfolioNunsongi() {
           className={`font-extrabold tracking-tight text-xl ${tone.text} text-neutral-900 dark:text-neutral-100`}
         >
           Nunsongi
-          <span className="ml-2 hidden sm:inline text-xs opacity-80">
+          <span className="hidden sm:inline text-sm font-semibold text-white/90 opacity-80">
             · Junior Data Scientist
           </span>
         </a>
@@ -157,7 +157,7 @@ export default function PortfolioNunsongi() {
               </h1>
               <p className={`mt-4 max-w-2xl ${tone.sub}`}>
                  
-                I’m a data scientist junior and self-taught learner exploring <span className="font-semibold">AI/ML</span>. 
+                I’m a junior data scientist and self-taught learner exploring <span className="font-semibold">AI/ML</span>. 
                 My goal is to build intelligent systems that learn from data and make sense of the world. 📚💫
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
