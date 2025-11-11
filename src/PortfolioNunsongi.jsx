@@ -116,7 +116,10 @@ export default function PortfolioNunsongi() {
      {/* NAV */} 
      <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
+        <a
+          href="#home"
+          className={`font-extrabold tracking-tight text-xl ${tone.text} text-neutral-900 dark:text-neutral-100`}
+        >
           Nunsongi
           <span className="ml-2 hidden sm:inline text-xs opacity-80">
             · Junior Data Scientist
