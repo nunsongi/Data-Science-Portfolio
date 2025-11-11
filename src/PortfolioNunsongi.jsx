@@ -133,7 +133,7 @@ export default function PortfolioNunsongi() {
               className={`
                 rounded-xl px-4 py-2 border ${tone.card} ${tone.ring}
                 ${tone.sub}                          /* color de texto = links del nav (p.ej. Habilidades) */
-                bg-transparent hover:bg-neutral-100/70   /* claro: botón 'ghost' con hover suave */
+                bg-transparent hover:bg-neutral-900   /* claro: botón 'ghost' con hover suave */
                dark:bg-white/5 dark:text-neutral-100    /* oscuro: pill translúcido + texto claro */
                dark:hover:bg-white/10                   /* oscuro: hover un poco más visible */
                 font-semibold text-base transition-colors
