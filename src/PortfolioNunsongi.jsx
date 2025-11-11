@@ -75,7 +75,7 @@ export default function PortfolioNunsongi() {
       title: 'Mapa de Riesgos Quito',
       year: '2025',
       desc: 'Análisis de sismos, lluvias y olas de calor con Python. Limpieza, EDA y visualizaciones interactivas.',
-      tags: ['Python', 'Pandas', 'Geo', 'EDA'],
+      tags: ['Python', 'Pandas', 'GeoPandas', 'EDA'],
       demo: '#',
       repo: '#',
     },
@@ -162,11 +162,13 @@ export default function PortfolioNunsongi() {
               </div>
             </div>
             <div className={`rounded-3xl border ${tone.card} p-6`}> 
-              <div className="aspect-square rounded-2xl bg-gradient-to-tr from-fuchsia-600/25 via-violet-600/20 to-blue-600/20 grid place-items-center">
-                <div className={`text-7xl`}>
-                  ✨
-                </div>
-              </div>
+              <div className="aspect-square rounded-2xl bg-transparent overflow-hidden grid place-items-center">
+                <img
+                  src="/avatar.jpg"
+                  alt="Avatar"
+                  className="h-full w-full object-cover"
+                  />
+                  </div>
               <p className={`mt-4 text-sm ${tone.sub}`}>
                 * Imagen/Avatar opcional arriba. Puedes reemplazarlo por tu foto.
               </p>
