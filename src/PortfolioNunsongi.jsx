@@ -164,7 +164,7 @@ export default function PortfolioNunsongi() {
             <div className={`rounded-3xl border ${tone.card} p-6`}> 
               <div className="aspect-square rounded-2xl bg-transparent overflow-hidden grid place-items-center">
                 <img
-                  src="/avatar.jpg"
+                  src="https://i.imgur.com/GdwJxVs.jpeg"
                   alt="Avatar"
                   className="h-full w-full object-cover"
                   />
