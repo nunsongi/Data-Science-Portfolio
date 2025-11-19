@@ -217,7 +217,7 @@ export default function PortfolioNunsongi() {
         </div>
       </Section>
 
-      {/* WHAT TO USE */}
+      {/* WHAT TO USE 
       <Section id="stack" title="¿Qué lenguaje uso para este sitio?" subtitle="Mi pila recomendada" tone={tone}>
         <div className="grid lg:grid-cols-2 gap-6">
           <div className={`border rounded-2xl p-6 ${tone.card}`}>
@@ -237,7 +237,7 @@ export default function PortfolioNunsongi() {
             </ul>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* ABOUT */}
       <Section id="sobre-mí" title="Sobre mí" subtitle="Un poco de contexto" tone={tone}>
