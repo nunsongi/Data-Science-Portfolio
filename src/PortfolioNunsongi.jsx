@@ -141,7 +141,7 @@ export default function PortfolioNunsongi() {
             ${tone.sub}                                   /* <- color de texto = links del nav */
           `}
       >
-        {mode === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
+        {mode === 'dark' ? '☀️' : '🌙'}
       </button>
           </div>
         </div>
