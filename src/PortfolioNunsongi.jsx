@@ -293,14 +293,16 @@ export default function PortfolioNunsongi() {
                  href="https://www.linkedin.com/in/dayana-c-a3470b299"
                  target="_blank"
                  rel="noreferrer"
-          >
+             >
                LinkedIn
               </a>
 
               <a
-                 className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
-                 href="mailto:nunsongi0613@gmail.com"
-              >
+                   className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                   href="https://mail.google.com/mail/?view=cm&fs=1&to=nunsongi0613@gmail.com"
+                   target="_blank"
+                   rel="noreferrer"
+            >
                Email
               </a>
             </div>
