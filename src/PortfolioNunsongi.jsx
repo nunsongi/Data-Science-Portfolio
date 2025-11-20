@@ -31,9 +31,7 @@ const PALETTE = {
 };
 
 const Tag = ({ children, tone }) => (
-  <span className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs ${tone}`}>
-    {children}
-  </span>
+  <span className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs ${tone}`}>{children}</span>
 );
 
 const Section = ({ id, title, subtitle, tone, children }) => (
@@ -47,9 +45,7 @@ const Section = ({ id, title, subtitle, tone, children }) => (
 );
 
 const ProjectCard = ({ p, tone }) => (
-  <article
-    className={`group border rounded-2xl p-5 transition-all ${tone.card} hover:shadow-2xl hover:-translate-y-[2px]`}
-  >
+  <article className={`group border rounded-2xl p-5 transition-all ${tone.card} hover:shadow-2xl hover:-translate-y-[2px]`}> 
     <div className="aspect-video w-full rounded-xl bg-gradient-to-tr from-fuchsia-600/20 via-purple-600/10 to-blue-600/20 grid place-items-center">
       <span className="text-sm opacity-60">Preview</span>
     </div>
@@ -60,35 +56,18 @@ const ProjectCard = ({ p, tone }) => (
     <p className={`mt-2 ${tone.sub}`}>{p.desc}</p>
     <div className="mt-3 flex flex-wrap gap-2">
       {p.tags.map((t) => (
-        <Tag key={t} tone={tone.chip}>
-          {t}
-        </Tag>
+        <Tag key={t} tone={tone.chip}>{t}</Tag>
       ))}
     </div>
     <div className="mt-5 flex gap-3">
-      <a
-        href={p.demo}
-        target="_blank"
-        rel="noreferrer"
-        className={`text-sm rounded-xl px-4 py-2 ${tone.button}`}
-      >
-        Demo
-      </a>
-      <a
-        href={p.repo}
-        target="_blank"
-        rel="noreferrer"
-        className={`text-sm rounded-xl px-4 py-2 ${tone.ghost}`}
-      >
-        Código
-      </a>
+      <a href={p.demo} target="_blank" rel="noreferrer" className={`text-sm rounded-xl px-4 py-2 ${tone.button}`}>Demo</a>
+      <a href={p.repo} target="_blank" rel="noreferrer" className={`text-sm rounded-xl px-4 py-2 ${tone.ghost}`}>Código</a>
     </div>
   </article>
 );
 
 export default function PortfolioNunsongi() {
-  const [mode, setMode] = useState<'dark' | 'light'>('dark');
-
+  const [mode, setMode] = useState('dark');
   const tone = useMemo(() => (mode === 'dark' ? PALETTE.dark : PALETTE.light), [mode]);
 
   const projects = [
@@ -125,42 +104,51 @@ export default function PortfolioNunsongi() {
     { title: 'Web', desc: 'React • Tailwind • Vite', icon: '🕸️' },
   ];
 
-  return (
-    <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}>
-      {/* NAV */}
-      <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
-            Nunsongi<span className={`${tone.accent}`}> Junior Data Scientist</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-6">
-            {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className={`${tone.sub}`}
-              >
-                {item}
-              </a>
+  const slugify = (s) =>
+    s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, "-");
+
+    const [form, setForm] = useState({
+  name: "",
+  email: "",
+  message: "",
+});
+
+  return ( 
+   <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}>
+      {/* NAV */} 
+        <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
+              Nunsongi<span className={`${tone.accent}`}> Junior Data Scientist</span>
+            </a>
+            <nav className="hidden md:flex items-center gap-6">
+              {['Proyectos', 'Habilidades', 'Sobre mí', 'Contacto'].map((item) => (
+                <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className={`${tone.sub} hover:${tone.accent} transition-colors`}>
+                  {item}
+               </a>
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-              aria-label="Cambiar tema"
-              className={`
-                rounded-xl px-4 py-2 border ${tone.card} ${tone.ring}
-                bg-transparent hover:bg-violet-50
-                dark:bg-white/5 dark:hover:bg-white/10
-                dark:text-neutral-100
-                font-semibold text-base transition-colors
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
-                focus-visible:ring-fuchsia-400/50 dark:focus-visible:ring-white/30
-                ${tone.sub}
-              `}
-            >
-              {mode === 'dark' ? '☀️' : '🌙'}
-            </button>
+           <button
+            onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+            aria-label="Cambiar tema"
+            className={`
+              rounded-xl px-4 py-2 border ${tone.card} ${tone.ring}
+              bg-transparent hover:bg-violet-50            /* claro: ghost + hover lilita suave */
+             dark:bg-white/5 dark:hover:bg-white/10       /* oscuro: pill translúcido */
+             dark:text-neutral-100                        /* oscuro: texto claro */
+              font-semibold text-base transition-colors
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+             focus-visible:ring-fuchsia-400/50 dark:focus-visible:ring-white/30
+            ${tone.sub}                                   /* <- color de texto = links del nav */
+          `}
+      >
+        {mode === 'dark' ? '☀️' : '🌙'}
+      </button>
           </div>
         </div>
       </header>
@@ -168,37 +156,26 @@ export default function PortfolioNunsongi() {
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none opacity-30">
-          <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full blur-3xl bg-fuchsia-600/30" />
-          <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full blur-3xl bg-violet-600/30" />
+          <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full blur-3xl bg-fuchsia-600/30"/>
+          <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full blur-3xl bg-violet-600/30"/>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <p className={`uppercase tracking-widest text-sm ${tone.sub}`}>Portafolio Personal</p>
-              <h1
-                className={`mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold ${tone.text}`}
-              >
-                Hi, I'm Dayana — a.k.a <span className={`${tone.accent}`}>Nunsongi</span>
-                <br className="hidden sm:block" />
+              <h1 className={`mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold ${tone.text}`}>
+                Hi, I’m Dayana — a.k.a <span className={`${tone.accent}`}>Nunsongi</span>
+                <br className="hidden sm:block"/>
+                
               </h1>
               <p className={`mt-4 max-w-2xl ${tone.sub}`}>
-                I'm a junior data scientist and self-taught learner exploring{' '}
-                <span className="font-semibold">AI/ML</span>. My goal is to build intelligent systems
-                that learn from data and make sense of the world. 📚💫
+                 
+                I’m a junior data scientist and self-taught learner exploring <span className="font-semibold">AI/ML</span>. 
+                My goal is to build intelligent systems that learn from data and make sense of the world. 📚💫
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href="#proyectos"
-                  className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.button}`}
-                >
-                  Ver Proyectos
-                </a>
-                <a
-                  href="#contacto"
-                  className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.ghost}`}
-                >
-                  Contactar
-                </a>
+                <a href="#proyectos" className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.button}`}>Ver Proyectos</a>
+                <a href="#contacto" className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.ghost}`}>Contactar</a>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-2">
                 <Tag tone={tone.chip}>Python</Tag>
@@ -210,22 +187,22 @@ export default function PortfolioNunsongi() {
                 <Tag tone={tone.chip}>TensorFlow</Tag>
               </div>
             </div>
-            <div className={`rounded-3xl border ${tone.card} p-6`}>
-              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-fuchsia-500/20 to-violet-500/20 grid place-items-center">
-                <span className="text-6xl">👩‍💻</span>
-              </div>
+            <div className={`rounded-3xl border ${tone.card} p-6`}> 
+              <div className="aspect-square rounded-2xl overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}avatar.jpg`}
+                  alt="Avatar de Dayana (Nunsongi)"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  />
+                </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* EXPERTISE */}
-      <Section
-        id="habilidades"
-        title="Áreas de Experiencia"
-        subtitle="Lo que disfruto construir"
-        tone={tone}
-      >
+      <Section id="habilidades" title="Áreas de Experiencia" subtitle="Lo que disfruto construir" tone={tone}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {expertise.map((e) => (
             <div key={e.title} className={`border rounded-2xl p-6 ${tone.card}`}>
@@ -238,18 +215,35 @@ export default function PortfolioNunsongi() {
       </Section>
 
       {/* PROJECTS */}
-      <Section
-        id="proyectos"
-        title="Proyectos Destacados"
-        subtitle="Selección de trabajos y estudios"
-        tone={tone}
-      >
+      <Section id="proyectos" title="Proyectos Destacados" subtitle="Selección de trabajos y estudios" tone={tone}>
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {projects.map((p) => (
             <ProjectCard key={p.title} p={p} tone={tone} />
           ))}
         </div>
       </Section>
+
+      {/* WHAT TO USE 
+      <Section id="stack" title="¿Qué lenguaje uso para este sitio?" subtitle="Mi pila recomendada" tone={tone}>
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className={`border rounded-2xl p-6 ${tone.card}`}>
+            <h3 className={`font-semibold text-xl ${tone.text}`}>Frontend</h3>
+            <ul className={`mt-3 list-disc pl-5 space-y-1 ${tone.sub}`}>
+              <li><b className={tone.accent}>React + Vite</b> para componentes y rendimiento.</li>
+              <li><b className={tone.accent}>TailwindCSS</b> para estilos rápidos y consistentes.</li>
+              <li>Soporte de modo <b>oscuro/claro</b> con estado local.</li>
+            </ul>
+          </div>
+          <div className={`border rounded-2xl p-6 ${tone.card}`}>
+            <h3 className={`font-semibold text-xl ${tone.text}`}>Datos & ML</h3>
+            <ul className={`mt-3 list-disc pl-5 space-y-1 ${tone.sub}`}>
+              <li><b className={tone.accent}>Python</b> como lenguaje principal.</li>
+              <li>Pandas / scikit-learn / Matplotlib para prototipos.</li>
+              <li>Publica notebooks con <b>nbviewer</b> o convierte resultados en dashboards.</li>
+            </ul>
+          </div>
+        </div>
+      </Section> */}
 
       {/* ABOUT */}
       <Section id="sobre-mí" title="Sobre mí" subtitle="Un poco de contexto" tone={tone}>
@@ -280,37 +274,34 @@ export default function PortfolioNunsongi() {
 
       {/* CONTACT */}
       <Section id="contacto" title="Contacto" subtitle="¿Tienes una idea? Hablemos" tone={tone}>
-        <div className="grid gap-6">
+        <div className={`grid md:grid-cols-2 gap-6`}>
           <div className={`border rounded-2xl p-6 ${tone.card}`}>
             <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
-            <p className={`${tone.sub} mt-2`}>
-              Prefiero mensajes claros y concretos. ¡Gracias por escribir!
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-              <a
-                className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
-                href="mailto:dc198029@gmail.com"
-              >
-                Email
-              </a>
+            <p className={`${tone.sub} mt-2`}>Prefiero mensajes claros y concretos. ¡Gracias por escribir!</p>
+            <div className="mt-4 flex gap-3">
+              <a className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`} href="#">GitHub</a>
+              <a className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`} href="#">LinkedIn</a>
+              <a className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`} href="#">Email</a>
             </div>
           </div>
+          <form className={`border rounded-2xl p-6 ${tone.card}`}
+                onSubmit={(e)=>{e.preventDefault(); alert('¡Gracias! Mensaje enviado (demo).');}}>
+            <div className="grid gap-4">
+              <div>
+                <label className={`block text-sm mb-1 ${tone.sub}`}>Nombre</label>
+                <input className={`w-full rounded-xl border px-3 py-2 outline-none ${tone.ring} ${mode==='dark'?'bg-transparent text-white placeholder-white/40':'bg-white text-zinc-900 placeholder-zinc-500'}`} placeholder="Tu nombre"/>
+              </div>
+              <div>
+                <label className={`block text-sm mb-1 ${tone.sub}`}>Email</label>
+                <input type="email" className={`w-full rounded-xl border px-3 py-2 outline-none ${tone.ring} ${mode==='dark'?'bg-transparent text-white placeholder-white/40':'bg-white text-zinc-900 placeholder-zinc-500'}`} placeholder="tu@email.com"/>
+              </div>
+              <div>
+                <label className={`block text-sm mb-1 ${tone.sub}`}>Mensaje</label>
+                <textarea rows={4} className={`w-full rounded-xl border px-3 py-2 outline-none ${tone.ring} ${mode==='dark'?'bg-transparent text-white placeholder-white/40':'bg-white text-zinc-900 placeholder-zinc-500'}`} placeholder="Cuéntame sobre tu proyecto"/>
+              </div>
+              <button className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.button}`}>Enviar</button>
+            </div>
+          </form>
         </div>
       </Section>
 
@@ -318,12 +309,9 @@ export default function PortfolioNunsongi() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className={`${tone.sub}`}>© {new Date().getFullYear()} Nunsongi | Portafolio.</p>
           <div className="flex gap-3 text-sm">
-            <a href="#proyectos" className={`${tone.sub}`}>
-              Proyectos
-            </a>
-            <a href="#contacto" className={`${tone.sub}`}>
-              Contacto
-            </a>
+            <a href="#stack" className={`${tone.sub} hover:${tone.accent}`}>Stack</a>
+            <a href="#proyectos" className={`${tone.sub} hover:${tone.accent}`}>Proyectos</a>
+            <a href="#contacto" className={`${tone.sub} hover:${tone.accent}`}>Contacto</a>
           </div>
         </div>
       </footer>
