@@ -277,7 +277,11 @@ export default function PortfolioNunsongi() {
         <div className={`grid md:grid-cols-2 gap-6`}>
           <div className={`border rounded-2xl p-6 ${tone.card}`}>
             <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
-            <p className={`${tone.sub} mt-2`}>Prefiero mensajes claros y concretos. ¡Gracias por escribir!</p>
+            <p className={`${tone.sub} mt-2`}>
+             ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, 
+             contáctame por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
+              </p>
+
             <div className="mt-4 flex gap-3">
               <a
                  className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
