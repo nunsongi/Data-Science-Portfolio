@@ -34,15 +34,16 @@ const Tag = ({ children, tone }) => (
   <span className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs ${tone}`}>{children}</span>
 );
 
-const Section = ({ id, title, subtitle, tone, children }) => (
+const Section = ({ id, title, subtitle, tone, children, center }) => (
   <section id={id} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div className="mb-8">
+    <div className={`mb-8 ${center ? 'text-center' : ''}`}>
       <h2 className={`text-3xl sm:text-4xl font-bold ${tone.text}`}>{title}</h2>
       {subtitle && <p className={`mt-2 ${tone.sub}`}>{subtitle}</p>}
     </div>
     {children}
   </section>
 );
+
 
 const ProjectCard = ({ p, tone }) => (
   <article className={`group border rounded-2xl p-5 transition-all ${tone.card} hover:shadow-2xl hover:-translate-y-[2px]`}> 
@@ -272,15 +273,17 @@ export default function PortfolioNunsongi() {
         </div>
       </Section>
 
-        {/* CONTACT */}
-        <Section id="contacto" title="Contacto" tone={tone}>
-          <div className="flex justify-center">
-            <div className={`border rounded-2xl p-6 ${tone.card} max-w-xl w-full`}>
-          <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
-            <p className={`${tone.sub} mt-2`}>
-              ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, 
-              contáctame por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
-            </p>
+          {/* CONTACT */}
+          <Section id="contacto" title="Contacto" tone={tone} center>
+            <div className="flex justify-center">
+              <div className={`border rounded-2xl p-6 ${tone.card} max-w-xl w-full`}>
+                <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
+                <p className={`${tone.sub} mt-2`}>
+                  ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, 
+                  contáctame por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
+                </p>
+                ...
+
 
             <div className="mt-4 flex gap-3">
               <a
