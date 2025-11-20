@@ -308,6 +308,7 @@ export default function PortfolioNunsongi() {
             </div>
 
           </div>
+          {/*
           <form className={`border rounded-2xl p-6 ${tone.card}`}
                 onSubmit={(e)=>{e.preventDefault(); alert('¡Gracias! Mensaje enviado (demo).');}}>
             <div className="grid gap-4">
@@ -326,6 +327,7 @@ export default function PortfolioNunsongi() {
               <button className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.button}`}>Enviar</button>
             </div>
           </form>
+          */}
         </div>
       </Section>
 
