@@ -279,10 +279,32 @@ export default function PortfolioNunsongi() {
             <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
             <p className={`${tone.sub} mt-2`}>Prefiero mensajes claros y concretos. ¡Gracias por escribir!</p>
             <div className="mt-4 flex gap-3">
-              <a className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`} href="#">GitHub</a>
-              <a className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`} href="#">LinkedIn</a>
-              <a className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`} href="#">Email</a>
+              <a
+                 className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                 href="https://github.com/nunsongi"
+                 target="_blank"
+                 rel="noreferrer"
+              >
+              GitHub
+              </a>
+
+              <a
+                 className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                 href="https://www.linkedin.com/in/dayana-c-a3470b299"
+                 target="_blank"
+                 rel="noreferrer"
+          >
+               LinkedIn
+              </a>
+
+              <a
+                 className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                 href="mailto:nunsongi0613@gmail.com"
+              >
+               Email
+              </a>
             </div>
+
           </div>
           <form className={`border rounded-2xl p-6 ${tone.card}`}
                 onSubmit={(e)=>{e.preventDefault(); alert('¡Gracias! Mensaje enviado (demo).');}}>
