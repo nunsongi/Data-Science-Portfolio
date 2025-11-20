@@ -272,15 +272,15 @@ export default function PortfolioNunsongi() {
         </div>
       </Section>
 
-      {/* CONTACT */}
-      <Section id="contacto" title="Contacto" subtitle="¿Tienes una idea? Hablemos" tone={tone}>
-        <div className={`grid md:grid-cols-2 gap-6`}>
-          <div className={`border rounded-2xl p-6 ${tone.card}`}>
-            <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
+        {/* CONTACT */}
+        <Section id="contacto" title="Contacto" tone={tone}>
+          <div className="flex justify-center">
+            <div className={`border rounded-2xl p-6 ${tone.card} max-w-xl w-full`}>
+          <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
             <p className={`${tone.sub} mt-2`}>
-             ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, 
-             contáctame por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
-              </p>
+              ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, 
+              contáctame por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
+            </p>
 
             <div className="mt-4 flex gap-3">
               <a
@@ -312,26 +312,6 @@ export default function PortfolioNunsongi() {
             </div>
 
           </div>
-          {/*
-          <form className={`border rounded-2xl p-6 ${tone.card}`}
-                onSubmit={(e)=>{e.preventDefault(); alert('¡Gracias! Mensaje enviado (demo).');}}>
-            <div className="grid gap-4">
-              <div>
-                <label className={`block text-sm mb-1 ${tone.sub}`}>Nombre</label>
-                <input className={`w-full rounded-xl border px-3 py-2 outline-none ${tone.ring} ${mode==='dark'?'bg-transparent text-white placeholder-white/40':'bg-white text-zinc-900 placeholder-zinc-500'}`} placeholder="Tu nombre"/>
-              </div>
-              <div>
-                <label className={`block text-sm mb-1 ${tone.sub}`}>Email</label>
-                <input type="email" className={`w-full rounded-xl border px-3 py-2 outline-none ${tone.ring} ${mode==='dark'?'bg-transparent text-white placeholder-white/40':'bg-white text-zinc-900 placeholder-zinc-500'}`} placeholder="tu@email.com"/>
-              </div>
-              <div>
-                <label className={`block text-sm mb-1 ${tone.sub}`}>Mensaje</label>
-                <textarea rows={4} className={`w-full rounded-xl border px-3 py-2 outline-none ${tone.ring} ${mode==='dark'?'bg-transparent text-white placeholder-white/40':'bg-white text-zinc-900 placeholder-zinc-500'}`} placeholder="Cuéntame sobre tu proyecto"/>
-              </div>
-              <button className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.button}`}>Enviar</button>
-            </div>
-          </form>
-          */}
         </div>
       </Section>
 
