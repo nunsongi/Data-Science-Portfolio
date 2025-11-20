@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
-
+import { FaGithub, FaLinkedin, FaEnvelope, FaMedium } from 'react-icons/fa';
+import { SiX, SiHuggingface } from 'react-icons/si';
 
 
 // --- Palette
@@ -280,13 +280,13 @@ export default function PortfolioNunsongi() {
           <Section id="contacto" title="Contacto" tone={tone} center>
             <div className="flex justify-center">
               <div className={`border rounded-2xl p-6 ${tone.card} max-w-xl w-full`}>
-                <h4 className={`font-semibold ${tone.text}`}>Redes</h4>
                 <p className={`${tone.sub} mt-2`}>
                   ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, 
                   contáctame por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
                 </p>
 
-            <div className="mt-4 flex flex-wrap gap-3">
+                <div className="mt-4 flex flex-wrap justify-center gap-3">
+              {/* GitHub */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://github.com/nunsongi"
@@ -297,6 +297,7 @@ export default function PortfolioNunsongi() {
                 <span>GitHub</span>
               </a>
 
+              {/* LinkedIn */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://www.linkedin.com/in/dayana-c-a3470b299"
@@ -307,6 +308,41 @@ export default function PortfolioNunsongi() {
                 <span>LinkedIn</span>
               </a>
 
+              {/* X */}
+              <a
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                href="https://x.com/nunsongi613"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SiX className="w-4 h-4" />
+                <span>X</span>
+              </a>
+
+
+              {/* Medium */}
+              <a
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                href="https://medium.com/@nunsongi0613"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaMedium className="w-4 h-4" />
+                <span>Medium</span>
+              </a>
+
+              {/* Hugging Face (opcional) */}
+              <a
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                href="https://huggingface.co/nunsongi"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SiHuggingface className="w-4 h-4" />
+                <span>Hugging Face</span>
+              </a>
+
+              {/* Email */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=nunsongi0613@gmail.com"
@@ -317,6 +353,7 @@ export default function PortfolioNunsongi() {
                 <span>Email</span>
               </a>
             </div>
+
           </div>
         </div>
       </Section>
