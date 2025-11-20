@@ -1,4 +1,7 @@
 import React, { useMemo, useState } from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+
+
 
 // --- Palette
 // Dark: purple + black
@@ -282,38 +285,38 @@ export default function PortfolioNunsongi() {
                   ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, 
                   contáctame por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
                 </p>
-                ...
 
-
-            <div className="mt-4 flex gap-3">
+            <div className="mt-4 flex flex-wrap gap-3">
               <a
-                 className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
-                 href="https://github.com/nunsongi"
-                 target="_blank"
-                 rel="noreferrer"
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                href="https://github.com/nunsongi"
+                target="_blank"
+                rel="noreferrer"
               >
-              GitHub
+                <FaGithub className="w-4 h-4" />
+                <span>GitHub</span>
               </a>
 
               <a
-                 className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
-                 href="https://www.linkedin.com/in/dayana-c-a3470b299"
-                 target="_blank"
-                 rel="noreferrer"
-             >
-               LinkedIn
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                href="https://www.linkedin.com/in/dayana-c-a3470b299"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin className="w-4 h-4" />
+                <span>LinkedIn</span>
               </a>
 
               <a
-                   className={`rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
-                   href="https://mail.google.com/mail/?view=cm&fs=1&to=nunsongi0613@gmail.com"
-                   target="_blank"
-                   rel="noreferrer"
-            >
-               Email
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=nunsongi0613@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaEnvelope className="w-4 h-4" />
+                <span>Email</span>
               </a>
             </div>
-
           </div>
         </div>
       </Section>
