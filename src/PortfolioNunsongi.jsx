@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaMedium } from 'react-icons/fa';
 import { SiX, SiHuggingface } from 'react-icons/si';
 
-// --- Palette
+// --- Paleta de colores
 const PALETTE = {
   dark: {
     bg: 'from-[#0b0416] via-[#140424] to-[#0b0416]',
@@ -80,7 +80,7 @@ const ProjectCard = ({ p, tone }) => (
         rel="noreferrer"
         className={`text-sm rounded-xl px-4 py-2 ${tone.ghost}`}
       >
-        Código
+        Code
       </a>
     </div>
   </article>
@@ -92,25 +92,25 @@ export default function PortfolioNunsongi() {
 
   const projects = [
     {
-      title: 'Mapa de Riesgos Quito',
+      title: 'Quito Risk Map',
       year: '2025',
-      desc: 'Análisis de sismos, lluvias y olas de calor con Python. Limpieza, EDA y visualizaciones interactivas.',
+      desc: 'Analysis of earthquakes, rainfall and heat waves with Python. Data cleaning, EDA and interactive visualizations.',
       tags: ['Python', 'Pandas', 'GeoPandas', 'EDA'],
       demo: '#',
       repo: '#',
     },
     {
-      title: 'Clasificador de Tweets (NLP)',
+      title: 'Tweet Classifier (NLP)',
       year: '2025',
-      desc: 'Modelo básico para clasificar sentimiento en español. Pipeline reproducible y métricas claras.',
+      desc: 'Basic model to classify sentiment in Spanish. Reproducible pipeline and clear evaluation metrics.',
       tags: ['Python', 'scikit-learn', 'NLP'],
       demo: '#',
       repo: '#',
     },
     {
-      title: 'Dashboard de Hábitos',
+      title: 'Habits Dashboard',
       year: '2024',
-      desc: 'Aplicación web para seguimiento de estudio y Pomodoros. Exporta reportes semanales.',
+      desc: 'Web app to track study sessions and Pomodoros. Exports weekly reports.',
       tags: ['React', 'Vite', 'Tailwind'],
       demo: '#',
       repo: '#',
@@ -119,8 +119,8 @@ export default function PortfolioNunsongi() {
 
   const expertise = [
     { title: 'Python', desc: 'Pandas • Numpy • Matplotlib • Jupyter', icon: '🐍' },
-    { title: 'Ciencia de Datos', desc: 'EDA • Limpieza • Feature Engineering', icon: '📊' },
-    { title: 'Machine Learning', desc: 'Modelos clásicos • Evaluación • Pipelines', icon: '🤖' },
+    { title: 'Data Science', desc: 'EDA • Cleaning • Feature Engineering', icon: '📊' },
+    { title: 'Machine Learning', desc: 'Classic models • Evaluation • Pipelines', icon: '🤖' },
     { title: 'Web', desc: 'React • Tailwind • Vite', icon: '🕸️' },
   ];
 
@@ -138,15 +138,15 @@ export default function PortfolioNunsongi() {
   });
 
   const navItems = [
-  { label: 'About',    id: 'home' },
-  { label: 'Skills',   id: 'skills' },
-  { label: 'Projects', id: 'proyectos' },
-  { label: 'Contact',  id: 'contacto' },
-];
+    { label: 'About', id: 'home' },
+    { label: 'Skills', id: 'skills' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Contact', id: 'contact' },
+  ];
 
   return (
     <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}>
-      {/* NAV */}
+      {/* NAVBAR */}
       <header className={`${tone.nav} sticky top-0 z-50 border-b border-white/10`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <a href="#home" className={`font-extrabold tracking-tight text-xl ${tone.text}`}>
@@ -167,7 +167,7 @@ export default function PortfolioNunsongi() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-              aria-label="Cambiar tema"
+              aria-label="Toggle theme"
               className={`
                 rounded-xl px-4 py-2 border ${tone.card} ${tone.ring}
                 bg-transparent hover:bg-violet-50
@@ -194,40 +194,40 @@ export default function PortfolioNunsongi() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <p className={`uppercase tracking-widest text-sm ${tone.sub}`}>Portafolio Personal</p>
+              <p className={`uppercase tracking-widest text-sm ${tone.sub}`}>Personal portfolio</p>
               <h1 className={`mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold ${tone.text}`}>
                 Hi, I’m Dayana — a.k.a <span className={`${tone.accent}`}>Nunsongi</span>
               </h1>
-              {/* nuevo texto de sobre mí aquí */}
+              {/* Nuevo texto de sobre mí aquí */}
               <p className={`mt-4 max-w-2xl ${tone.sub}`}>
-                I’m a junior data scientist and self-taught learner focused on end-to-end data workflows: 
-                from exploring messy datasets and asking the right questions to building machine learning 
-                models and communicating insights with clear visualizations. I enjoy working on AI/ML 
-                projects that solve real problems 
-                and help people make better decisions. 📚💫
+                I’m a junior data scientist and self-taught learner focused on end-to-end data
+                workflows: from exploring messy datasets and asking the right questions to building
+                machine learning models and communicating insights with clear visualizations. I enjoy
+                working on AI/ML projects that solve real problems and help people make better
+                decisions. 📚💫
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href="#proyectos"
+                  href="#projects"
                   className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.button}`}
                 >
-                  Ver Proyectos
+                  View projects
                 </a>
                 <a
-                  href="#contacto"
+                  href="#contact"
                   className={`rounded-xl px-5 py-3 text-sm font-semibold ${tone.ghost}`}
                 >
-                  Contactar
+                  Get in touch
                 </a>
               </div>
-              {/* chips de librerías ELIMINADOS del hero */}
+              {/* Chips de librerías eliminados del hero */}
             </div>
             <div className={`rounded-3xl border ${tone.card} p-6`}>
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
                   src={`${import.meta.env.BASE_URL}avatar.jpg`}
-                  alt="Avatar de Dayana (Nunsongi)"
+                  alt="Avatar of Dayana (Nunsongi)"
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -237,36 +237,29 @@ export default function PortfolioNunsongi() {
         </div>
       </section>
 
-      {/* SKILLS */}
-          <Section
-            id="skills"
-            title="Skills"
-            tone={tone}
-          >
-            <div className={`border rounded-2xl p-6 ${tone.card} max-w-5xl mx-auto`}>
-              <p className={`mt-1 text-sm ${tone.sub} text-center`}>
-                Technologies I use the most.
-              </p>
+      {/* HABILIDADES */}
+      <Section id="skills" title="Skills" tone={tone}>
+        <div className={`border rounded-2xl p-6 ${tone.card} max-w-5xl mx-auto`}>
+          <p className={`mt-1 text-sm ${tone.sub} text-center`}>Technologies I use the most.</p>
 
-             <div className="mt-4 flex flex-wrap justify-center gap-3">
-                <Tag tone={tone.chip}>Python</Tag>
-                <Tag tone={tone.chip}>Pandas</Tag>
-                <Tag tone={tone.chip}>Numpy</Tag>
-                <Tag tone={tone.chip}>Matplotlib</Tag>
-                <Tag tone={tone.chip}>ScikitLearn</Tag>
-                <Tag tone={tone.chip}>PyTorch</Tag>
-                <Tag tone={tone.chip}>TensorFlow</Tag>
-                {/* aquí puedes seguir agregando más skills cuando quieras */}
-              </div>
-            </div>
-          </Section>
-
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            <Tag tone={tone.chip}>Python</Tag>
+            <Tag tone={tone.chip}>Pandas</Tag>
+            <Tag tone={tone.chip}>Numpy</Tag>
+            <Tag tone={tone.chip}>Matplotlib</Tag>
+            <Tag tone={tone.chip}>Scikit-learn</Tag>
+            <Tag tone={tone.chip}>PyTorch</Tag>
+            <Tag tone={tone.chip}>TensorFlow</Tag>
+            {/* Aquí puedes seguir agregando más skills cuando quieras */}
+          </div>
+        </div>
+      </Section>
 
       {/* PROYECTOS */}
       <Section
-        id="proyectos"
-        title="Proyectos Destacados"
-        subtitle="Selección de trabajos y estudios"
+        id="projects"
+        title="Featured projects"
+        subtitle="Selection of projects and learning explorations"
         tone={tone}
       >
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -276,19 +269,17 @@ export default function PortfolioNunsongi() {
         </div>
       </Section>
 
-      {/* (SECCIÓN SOBRE MÍ ORIGINAL ELIMINADA) */}
-
-      {/* CONTACTO */}
-      <Section id="contacto" title="Contacto" tone={tone} center>
+      {/* SECCIÓN DE CONTACTO */}
+      <Section id="contact" title="Contact" tone={tone} center>
         <div className="flex justify-center">
           <div className={`border rounded-2xl p-6 ${tone.card} max-w-xl w-full`}>
             <p className={`${tone.sub} mt-2`}>
-              ¿Quieres trabajar conmigo? Para proyectos de datos u oportunidades laborales, contáctame
-              por LinkedIn o por correo. No respondo a spam ni a mensajes comerciales.
+              Want to work with me? For data projects or job opportunities, you can reach out via
+              LinkedIn or email. I don’t reply to spam or mass commercial messages.
             </p>
 
             <div className="mt-4 flex flex-wrap justify-center gap-3">
-              {/* GitHub */}
+              {/* Enlace a GitHub */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://github.com/nunsongi"
@@ -299,7 +290,7 @@ export default function PortfolioNunsongi() {
                 <span>GitHub</span>
               </a>
 
-              {/* LinkedIn */}
+              {/* Enlace a LinkedIn */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://www.linkedin.com/in/dayana-c-a3470b299"
@@ -310,7 +301,7 @@ export default function PortfolioNunsongi() {
                 <span>LinkedIn</span>
               </a>
 
-              {/* X */}
+              {/* Enlace a X */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://x.com/nunsongi613"
@@ -321,7 +312,7 @@ export default function PortfolioNunsongi() {
                 <span>X</span>
               </a>
 
-              {/* Medium */}
+              {/* Enlace a Medium */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://medium.com/@nunsongi0613"
@@ -332,7 +323,7 @@ export default function PortfolioNunsongi() {
                 <span>Medium</span>
               </a>
 
-              {/* Hugging Face */}
+              {/* Enlace a Hugging Face */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://huggingface.co/nunsongi"
@@ -343,7 +334,7 @@ export default function PortfolioNunsongi() {
                 <span>Hugging Face</span>
               </a>
 
-              {/* Email */}
+              {/* Enlace a correo electrónico */}
               <a
                 className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm ${tone.ghost}`}
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=nunsongi0613@gmail.com"
@@ -360,16 +351,16 @@ export default function PortfolioNunsongi() {
 
       <footer className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className={`${tone.sub}`}>© {new Date().getFullYear()} Nunsongi | Portafolio.</p>
+          <p className={`${tone.sub}`}>© {new Date().getFullYear()} Nunsongi | Portfolio.</p>
           <div className="flex gap-3 text-sm">
             <a href="#skills" className={`${tone.sub} hover:${tone.accent}`}>
               Skills
             </a>
-            <a href="#proyectos" className={`${tone.sub} hover:${tone.accent}`}>
-              Proyectos
+            <a href="#projects" className={`${tone.sub} hover:${tone.accent}`}>
+              Projects
             </a>
-            <a href="#contacto" className={`${tone.sub} hover:${tone.accent}`}>
-              Contacto
+            <a href="#contact" className={`${tone.sub} hover:${tone.accent}`}>
+              Contact
             </a>
           </div>
         </div>
