@@ -242,11 +242,11 @@ export default function PortfolioNunsongi() {
             tone={tone}
           >
             <div className={`border rounded-2xl p-6 ${tone.card} max-w-5xl mx-auto`}>
-              <p className={`mt-1 text-sm ${tone.sub}`}>
-                Tech I use the most.
+              <p className={`mt-1 text-sm ${tone.sub} text-center`}>
+                Technologies I use the most.
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-3">
+             <div className="mt-4 flex flex-wrap justify-center gap-3">
                 <Tag tone={tone.chip}>Python</Tag>
                 <Tag tone={tone.chip}>Pandas</Tag>
                 <Tag tone={tone.chip}>Numpy</Tag>
