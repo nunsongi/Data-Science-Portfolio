@@ -199,12 +199,13 @@ export default function PortfolioNunsongi() {
               </h1>
               {/* nuevo texto de sobre mí aquí */}
               <p className={`mt-4 max-w-2xl ${tone.sub}`}>
-                Soy una <span className="font-semibold">junior data scientist</span> y aprendiz
-                autodidacta explorando <span className="font-semibold">AI/ML</span>. Me interesan los
-                procesos completos: desde formular preguntas hasta entregar visualizaciones claras y
-                modelos evaluados con rigor. Busco oportunidades para aprender, colaborar y crear
-                herramientas útiles. 📚💫
+                I’m a junior data scientist and self-taught learner focused on end-to-end data workflows: 
+                from exploring messy datasets and asking the right questions to building machine learning 
+                models and communicating insights with clear visualizations. I enjoy working on AI/ML 
+                projects that solve real problems 
+                and help people make better decisions. 📚💫
               </p>
+
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   href="#proyectos"
