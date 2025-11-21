@@ -137,8 +137,12 @@ export default function PortfolioNunsongi() {
     message: '',
   });
 
-  // orden nuevo del menú: Sobre mí, Habilidades, Proyectos, Contacto
-  const navItems = ['About', 'Skills', 'Projects', 'Contact'];
+  const navItems = [
+  { label: 'About',    id: 'home' },
+  { label: 'Skills',   id: 'skills' },
+  { label: 'Projects', id: 'proyectos' },
+  { label: 'Contact',  id: 'contacto' },
+];
 
   return (
     <div className={`min-h-screen w-full bg-gradient-to-b ${tone.bg} transition-colors`}>
@@ -149,20 +153,17 @@ export default function PortfolioNunsongi() {
             Nunsongi<span className={`${tone.accent}`}> Junior Data Scientist</span>
           </a>
           <nav className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => {
-                const id = item === 'About' ? 'home' : slugify(item); 
-                return (
-                  <a
-                    key={item}
-                    href={`#${id}`}
-                    className={`${tone.sub} hover:${tone.accent} transition-colors`}
-                  >
-                    {item}
-                  </a>
-                );
-              })}
-
+            {navItems.map(({ label, id }) => (
+              <a
+                key={label}
+                href={`#${id}`}
+                className={`${tone.sub} hover:${tone.accent} transition-colors`}
+              >
+                {label}
+              </a>
+            ))}
           </nav>
+
           <div className="flex items-center gap-2">
             <button
               onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
