@@ -1,16 +1,14 @@
-# React + Vite
+# 📊 Data Science Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi portafolio profesional de Ciencia de Datos, desarrollado con **React + Vite** y desplegado en **Vercel**. Aquí presento proyectos, visualizaciones, notebooks, dashboards y experimentos que reflejan mi camino hacia Data Science, Machine Learning y Análisis de Datos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Objetivo del portafolio
 
-## React Compiler
+Mostrar mi progreso, mis habilidades y mi enfoque analítico en el mundo de la Ciencia de Datos, hacia mi meta de convertirme en profesional en **Data Science e Inteligencia Artificial**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
